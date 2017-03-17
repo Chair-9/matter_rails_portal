@@ -9,16 +9,16 @@
 <body>
 <div class="container">
   <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <h4>AdventureMatter</h4>
-    </div>
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <h4><%= link_to "AdventureMatter", root_path %></h4>
+      </div>
 
       <div class="nav navbar-nav navbar-right">
         <% if signed_in? -%>
@@ -28,7 +28,7 @@
         <% end -%>
       </div>
     </div>
-</nav>
+  </nav>
 
 <% if flash[:notice] %>
   <div class="alert alert-dismissible alert-success text-center" role="alert">
@@ -43,11 +43,11 @@
   </div>
   <br />
   <br />
-  <div class="container">
+  <div class="container navbar-fixed-bottom">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <ul class="nav navbar-nav navbar-right">
-          <li><a class="navbar-brand" href="#">AdventureMatter</a></li>
+          <li><a class="navbar-brand" href="#">©AdventureMatter</a></li>
         </ul>
       </div>
     </nav>

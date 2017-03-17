@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :dashboards, only: :show
+  resources :user_informations
 
   constraints Clearance::Constraints::SignedIn.new { |user| user.admin? } do
     root to: "admin/dashboards#show", as: :admin_root

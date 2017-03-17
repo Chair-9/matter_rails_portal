@@ -1,0 +1,10 @@
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="well">
+      <h1> <%= @user_informations.first_name %> <%= @user_informations.last_name %></h1>
+      <div> <%= @user_informations.role %></div>
+      <div> <%= @user_informations.business_name %></div>
+      <%= link_to "Edit Info", edit_user_information_path %>
+    </div>
+  </div>
