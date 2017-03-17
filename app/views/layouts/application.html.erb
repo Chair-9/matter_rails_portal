@@ -1,22 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="ROBOTS" content="NOODP" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <%#
-    Configure default and controller-, and view-specific titles in
-    config/locales/en.yml. For more see:
-    https://github.com/calebthompson/title#usage
-  %>
-  <title><%= title %></title>
-  <%= stylesheet_link_tag :application, media: "all" %>
-  <%= csrf_meta_tags %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tag %>
+  <%= stylesheet_link_tag 'application' %>
+
 </head>
-<body class="<%= body_class %>">
-  <%= render "flashes" -%>
-  <%= yield %>
-  <%= render "javascript" %>
-  <%= render "css_overrides" %>
+<body>
+<div class="container">
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <h4>AdventureMatter</h4>
+    </div>
+
+      <div class="nav navbar-nav navbar-right">
+        <% if signed_in? -%>
+          <%= link_to "Sign Out", sign_out_path, :method => :delete, class: "btn btn-primary" %>
+        <% else -%>
+          <%= link_to "Sign In", sign_in_path, class: "btn btn-primary" %>
+        <% end -%>
+      </div>
+    </div>
+</nav>
+
+<% if flash[:notice] %>
+  <div class="alert alert-dismissible alert-success text-center" role="alert">
+    <%= flash[:notice] %><button type="button" class="close" data-dismiss="alert">×</button>
+  </div>
+<% end %>
+
+<br />
+</div>
+  <div class="container">
+    <%= yield %>
+  </div>
+  <br />
+  <br />
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="navbar-brand" href="#">AdventureMatter</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </body>
 </html>
