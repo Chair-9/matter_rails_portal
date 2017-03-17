@@ -59,6 +59,6 @@ group :staging, :production do
 end
 
 gem 'high_voltage'
-gem 'bourbon', '~> 5.0.0.beta.7'
-gem 'neat', '~> 2.0.0.beta.1'
-gem 'refills', group: [:development, :test]
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'bootswatch-rails'
+gem "clearance"
