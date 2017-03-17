@@ -1,5 +1,8 @@
 # Matter
 
+This is an MVP of a marketplace for Brands to post jobs and for freelancers to apply to those jobs.  
+It will handle payment and content uploading 
+
 ## Getting Started
 
 After you have cloned this repo, run this setup script to set up your machine
